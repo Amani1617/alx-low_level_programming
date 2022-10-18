@@ -1,5 +1,4 @@
 #include "main.h"
-#include<stdio.h>
 
 /**
  * main - prints putchar
@@ -10,7 +9,6 @@ int main(void)
 {
 printf("_");
 printf("p");
-printf("u");
 printf("u");
 printf("t");
 printf("c");
