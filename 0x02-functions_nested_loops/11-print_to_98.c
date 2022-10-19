@@ -20,3 +20,5 @@ printf("%d, ", n++);
 printf("%d\n", n);
 }
 }
+print_to_98(98);
+}
