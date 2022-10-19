@@ -2,11 +2,10 @@
 #include <stdio.h>
 
 /**
- * main - check the code
  * print_alphabet - prints the alphabet in lowercase
  * Return: always 0
  */
-int main(void)
+void print_alphabet(void)
 {
 print_alphabet();
 
