@@ -11,7 +11,7 @@ int a;
 
 for (a = 'a'; a <= 'z'; a++)
 {
-_putchar(a);
+	printf(a);
 }
-_putchar('\n');
+printf('\n');
 }
