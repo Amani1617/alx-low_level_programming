@@ -2,9 +2,9 @@
 #include <stdio.h>
 
 /**
- * main - checks if a character is uppercase
+ * _isupper - checks if a character is uppercase
  * @c: variable text
- * Return: Always 0.
+ * Return: Always 0
  */
 int _isupper(int c);
 {
