@@ -7,6 +7,7 @@
  * Return: Always 0
  */
 int _isupper(int c);
+char c;
 {
 if (c >= 'A' && c <= 'z')
 {
