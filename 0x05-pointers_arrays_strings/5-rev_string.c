@@ -20,6 +20,4 @@ rv = s[i];
 s[i] = s[c];
 s[c] = rv;
 }
-
-return (0);
 }
