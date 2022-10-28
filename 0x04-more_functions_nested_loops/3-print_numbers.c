@@ -3,6 +3,7 @@
 
 /**
  * print_numbers - print from 0 to 9
+ * without 2 and 5
  * Return: Always 0
  */
 void print_numbers(void)
