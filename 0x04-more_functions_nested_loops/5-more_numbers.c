@@ -5,7 +5,7 @@
  * more_numbers - prints 0 to 14 ten times
  * Return: Always 0
  */
-void more_numbers(void);
+void more_numbers(void)
 {
 int num, a
 for (a = 0, a <= 9; a++)
