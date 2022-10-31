@@ -13,9 +13,9 @@ int i = 0;
 int j = 0;
 for (; s[i]; i++)
 {
-for (j = 0; a[j]; j++)
+for (j = 0; accept[j]; j++)
 {
-if (s[i] == a[j])
+if (s[i] == accept[j])
 {
 break;
 }
