@@ -20,7 +20,7 @@ if (s[i] == accept[j])
 break;
 }
 }
-if (s[i] != a[j])
+if (s[i] != accept[j])
 break;
 }
 return (i);
