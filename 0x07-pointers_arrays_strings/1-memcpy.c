@@ -17,5 +17,5 @@ while (n-- > 0)
 dest++;
 src++;
 }
-return (dest);
+return (src);
 }
