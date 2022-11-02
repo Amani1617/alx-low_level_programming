@@ -3,7 +3,7 @@
 
 /**
  * _strlen_recursion - returns the length of a string
- * @s: the string whose length is to be determined
+ * @s: the string to be accounted
  *
  * Return: the length of the string
  */
@@ -15,5 +15,4 @@ if (*s)
 {
 len++;
 len += _strlen_recursion(s + 1);
-}
 }
