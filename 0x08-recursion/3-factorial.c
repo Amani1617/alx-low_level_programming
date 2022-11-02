@@ -6,14 +6,14 @@
  * @n: the number whose factorial is determined
  *
  * Return: if n > 0 - the factorial of n
- *         if n < 0 - doesn't exist
+ *         if n < 0 - 1 to show it doesn't exist
  */
 int factorial(int n)
 {
 int result = n;
 
 if (n < 0)
-return (doesn't exist);
+return (-1);
 else if (n >= 0 && n <= 1)
 return (1);
 }
