@@ -11,7 +11,9 @@ int is_prime_number(int n)
 int iter;
 iter = 2;
 if (n < 2)
+{
 return (0);
+}
 else if (n == 2 || n % 2 != iter)
 return (1);
 }
