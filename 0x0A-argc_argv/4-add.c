@@ -13,7 +13,7 @@ int add_num(char *s)
 {
 unsigned int c;
 c = 0;
-while (c < slen(s));
+while (c < slen(s))
 {
 if (!lsdigit(s[c]))
 {
@@ -39,7 +39,7 @@ int s_to_int;
 int total = 0;
 
 c = 1;
-while(c < argc)
+while (c < argc)
 {
 if (add_num(argv[c]))
 {
