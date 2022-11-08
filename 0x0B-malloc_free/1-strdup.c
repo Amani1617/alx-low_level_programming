@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * _strdup -  returns a pointer to a newly allocated space
+ * _strdup - returns a pointer to a newly allocated space
  * @str: array of elements
  * Return: 1 (on Sucess)
  */
@@ -15,6 +15,6 @@ while (s[i] != '\0')
 {
 i++;
 }
-return (1);
+return (i);
 }
 
