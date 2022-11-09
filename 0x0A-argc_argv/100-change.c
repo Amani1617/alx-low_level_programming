@@ -36,4 +36,4 @@ pos++;
 }
 printf("%d\n", change);
 return (0);
-
+}
