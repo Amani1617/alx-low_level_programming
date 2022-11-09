@@ -7,7 +7,7 @@
  * add_num - adds positive numbers
  * @s: string array
  *
- * Return: Always o (Win)
+ * Return: Always 0 (Win)
  */
 int add_num(char *s)
 {
@@ -29,7 +29,7 @@ return (1);
  * @argc: counts the number of arguments
  * @argv: The arguments
  *
- * Return: Always o (Win)
+ * Return: Always 0 (Win)
  */
 
 int main(int argc, char **argv)
