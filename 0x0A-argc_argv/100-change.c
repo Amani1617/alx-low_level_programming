@@ -9,9 +9,9 @@
  */
 int main(int argc, char **argv)
 {
-int pos, tot, cha, aux;
+int pos, tot, change, aux;
 int tokens[] = {25, 10, 5, 2, 1};
-pos = tot = cha = aux = 0;
+pos = tot = change = aux = 0;
 if (argc != 2)
 {
 printf("ERROR\n");
@@ -29,11 +29,11 @@ while (tokens[pos] != '\0')
 if (tot >= tokens[pos])
 {
 aux = (tot / tokens[pos]);
-cha += aux;
+change += aux;
 tot -= tokens[pos] * aux;
 }
 pos++;
 }
-printf("%d\n", cha);
+printf("%d\n", change);
 return (0);
 
