@@ -12,6 +12,7 @@ p = malloc(b);
 if (p == NULL)
 {
 exit(98);
+_putchar("/n");
 }
 return (p);
 }
