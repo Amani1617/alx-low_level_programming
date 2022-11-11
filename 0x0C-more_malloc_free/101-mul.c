@@ -23,7 +23,7 @@ if (argv[a][b] > 57 || argv[a][b] < 48)
 exit(98); }
 }
 }
-pro = atoi(argv[1]) * atoi(argv[2]);
+pro = atol(argv[1]) * atol(argv[2]);
 printf("%lu\n", pro);
 return (0);
 }
