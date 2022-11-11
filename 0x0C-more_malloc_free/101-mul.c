@@ -12,14 +12,14 @@ int main(int argc, char **argv)
 unsigned long pro;
 int a, b;
 if (argc != 3)
-{ printf("ERROR\n");
+{ printf("Error\n");
 exit(98); }
 for (a = 1; a < argc; a++)
 {
 for (b = 0; argv[a][b] != '\0'; b++)
 {
 if (argv[a][b] > 57 || argv[a][b] < 48)
-{ printf("ERROR\n");
+{ printf("Error\n");
 exit(98); }
 }
 }
