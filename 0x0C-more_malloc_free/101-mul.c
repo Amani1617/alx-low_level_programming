@@ -9,21 +9,21 @@
 
 int main(int argc, char *argv[])
 {
-unsigned long pro;
-int a, b;
+unsigned long mul;
+int num1, num2;
 if (argc != 3)
 { printf("Error\n");
 exit(98); }
-for (a = 1; a < argc; a++)
+for (num1 = 1; num1 < argc; a++)
 {
-for (b = 0; argv[a][b] != '\0'; b++)
+for (num2 = 0; argv[num1][num2] != '\0'; b++)
 {
-if (argv[a][b] > 57 || argv[a][b] < 48)
+if (argv[num1][num2] > 57 || argv[num1][num2] < 48)
 { printf("Error\n");
 exit(98); }
 }
 }
-pro = atol(argv[1]) * atol(argv[2]);
+mul = atol(argv[1]) * atol(argv[2]);
 printf("%lu\n", pro);
 return (0);
 }
