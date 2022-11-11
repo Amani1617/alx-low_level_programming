@@ -2,7 +2,7 @@
 
 /**
  * main - product of two values
- * @argc: counts arguments
+ * @argc: number of arguments
  * @argv: arguments
  * Return: int
  */
@@ -16,7 +16,7 @@ if (argc != 3)
 exit(98); }
 for (a = 1; a < argc; a++)
 {
-for (b = 0; b != argv[a][b] != '\0'; b++)
+for (b = 0; argv[a][b] != '\0'; b++)
 {
 if (argv[a][b] > 57 || argv[a][b] < 48)
 { printf("ERROR\n");
