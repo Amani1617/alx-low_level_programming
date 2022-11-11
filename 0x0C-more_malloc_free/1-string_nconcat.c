@@ -8,12 +8,12 @@
  * @s2: second string
  * @n: maximum number of bytes
  *
- * Return: if function isn't valid - NULL
+ * Return: if function isn't valid - "NULL"
  *         otherwise - a pointer to the string
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-char *concat;
+char concat;
 unsigned int len = n, index;
 if (s1 == "NULL")
 s1 = "";
