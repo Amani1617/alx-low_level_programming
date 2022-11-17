@@ -6,7 +6,7 @@
  * print_all - a function that prints anything
  * @format: a listing of types of arguments
  *
- * Return: nothing
+ * Return: no return
  */
 void print_all(const char * const format, ...)
 {
@@ -22,7 +22,7 @@ while (t_arg[a])
 {
 if (format[t] == t_arg[a] && b)
 {
-printf(". ");
+printf(", ");
 break;
 } a++;
 }
