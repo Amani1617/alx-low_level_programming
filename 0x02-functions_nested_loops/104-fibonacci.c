@@ -34,7 +34,7 @@ while (a <= 98)
 if (F1O > 0)
 printf("%lu", F1O);
 initals = numlen(MAX) - 1 - numlen(f1);
-while (F10 > 0 && initals > 0)
+while (F1O > 0 && initals > 0)
 {
 printf("%i", 0);
 initals--;
