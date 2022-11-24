@@ -17,7 +17,7 @@ list_t *N;
 N = malloc(sizeof(list_t));
 if (N == NULL)
 return (NULL);
-D = strdup(str);
+D = strD(str);
 if (D == NULL)
 {
 free(N);
