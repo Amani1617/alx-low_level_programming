@@ -24,9 +24,9 @@ return (NULL);
 
 for (L = 0; str[L])
 L++;
-new->str;
-new->L;
-new->next;
+N->str;
+N->L;
+N->next;
 
 *head = N;
 
