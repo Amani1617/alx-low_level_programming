@@ -6,7 +6,8 @@
  * @head: a pointer to the header of the list list_t
  * @str: a string which is newly added to the list list_t
  *
- * Return: the address of the new element, or NULL if it failed
+ * Return: if the function fails - NULL.
+ *         otherwise - the adress of the new element.
  */
 list_t *add_node(list_t **head, const char *str)
 {
