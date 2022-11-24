@@ -22,11 +22,11 @@ free(N);
 return (NULL);
 }
 
-for (L = 0; str[L])
+for (L = 0; str[L];)
 L++;
-N->str;
-N->L;
-N->next;
+N->str = D;
+N->L = L;
+N->next = *head;
 
 *head = N;
 
