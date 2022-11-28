@@ -20,7 +20,7 @@ above = (*head)->next;
 below = *head;
 *head = above;
 }
-(*head)->next = behind;
+(*head)->next = below;
 
 return (*head);
 }
