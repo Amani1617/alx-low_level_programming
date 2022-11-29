@@ -6,10 +6,10 @@ size_t print_listint_safe(const listint_t *head);
 
 /**
  * looped_listint_len - counts the unique ones in the list.
- *
+ * 
  * @head: a pinter to the head of the list.
  *
- * Retrun: if the list is looped
+ * Retrun: if the list is looped - 0.
  *         otherwise: the number of unique nodes in the list
  */
 size_t looped_listint_len(const listint_t *head)
@@ -46,4 +46,27 @@ tor = tor->next;
 hare = (hare->next)->next;
 }
 return (0);
+}
+
+/**
+ * print_listint_safe - prints a listint_t safe linked list.
+ * @head: a pointer to the head of listint_t list.
+ * 
+ * Retrun: the numer of nodes in the list.
+ */
+size_t print_listint_safe(const listint_t *head)
+{
+size_t nodes, index = 0;
+nodes = looped_listint_len(head);
+
+if (nodes == 0)
+{
+for (; head != NULL; nodes++)
+{
+printf("[%p] %d\n", (void *)head, head->n);
+head = head->next;
+}
+printf(".> [%p] %d\n", (void *)head, head->n);
+}
+return (nodes);
 }
