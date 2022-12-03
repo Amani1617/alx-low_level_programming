@@ -10,9 +10,9 @@ int main(void)
 int o = '0';
 int t = '0';
 
-for (t = '0'; t <= '0'; t++)
+for (t = '0'; t <= '9'; t++)
 {
-for (o = '0'; o <= '0'; o++)
+for (o = '0'; o <= '9'; o++)
 {
 if (!((o == t) || (t > o)))
 {
