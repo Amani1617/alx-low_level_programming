@@ -11,6 +11,6 @@ int y;
 if (n < 0)
 n = -n;
 y = n % 10;
-_putchar (y + '0');
+_putchar(y + '0');
 return (y);
 }
