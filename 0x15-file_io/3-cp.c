@@ -2,52 +2,47 @@
 #include <stdio.h>
 
 /**
- * main - copies the content of a file to another file.
- * @argc: number of args passed.
- * @argv: array of arguments used.
- *
- * Return: Always 0 (Success)
- */
-int main(int argc, char *argv[])
-{
-	int frd_r, fd_w, r, a, b, BUFSIZ;
-	char buf[BUFSIZ];
+* main - copies information from f_f to f_t.
+* @ac: number of arguments
+* @av: array of arguments
+* Return: Always 0.
+*/
 
-	if (argc != 3)
+int main(int ac, char **av)
+{
+	int f_f, f_t;
+	ssize_t  l_read = 1024, l_write, close_file;
+	char content[1024];
+
+	if (ac != 3)
+	{ dprintf(STDERR_FILENO, "Usage: cp f_f f_t\n");
+		exit(97); }
+	f_f = open(av[1], O_RDONLY);
+	if (f_f == -1)
+	{ dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]),
+		exit(98); }
+	f_t = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
+	if (f_t == -1)
+	{ dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
+		exit(99); }
+	while (l_read == 1024)
 	{
-		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
-		exit(97);
+		l_read = read(f_f, content, 1024);
+		if (l_read == -1)
+		{ dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
+			exit(98); }
+		l_write = write(f_t, content, l_read);
+		if (l_write == -1)
+		{ dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
+			exit(99); }
 	}
-	frd_r = open(argv[1], O_RDONLY);
-	if (frd_r < 0)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-		exit(98);
-	}
-	fd_w = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
-	while ((r = read(fd_w, buf, BUFSIZ)) > 0)
-	{
-		if (fd_w < 0 || write(fd_w, buf, r) != r)
-		{
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-			close(frd_r);
-			exit(99);
-		}
-	}
-	if (r < 0)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-		exit(98);
-	}
-	a = close(frd_r);
-	b = close(fd_w);
-	if (a < 0 || b < 0)
-	{
-		if (a < 0)
-			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", frd_r);
-		if (b < 0)
-			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_w);
-		exit(100);
-	}
-	return (0);
+	close_file = close(f_f);
+	if (close_file == -1)
+	{ dprintf(STDERR_FILENO, "Error: Can't close fd  %d\n", f_f);
+		exit(100); }
+	close_file = close(f_t);
+	if (close_file == -1)
+	{ dprintf(STDERR_FILENO, "Error: Can't close fd  %d\n", f_t);
+		exit(100); }
+return (0);
 }
