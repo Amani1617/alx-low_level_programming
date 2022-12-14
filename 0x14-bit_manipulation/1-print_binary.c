@@ -8,7 +8,7 @@
  */
 void print_binary(unsigned long int n)
 {
-	int fl = 0;
+	int f = 0;
 	unsigned long int mask = 1;
 
 	mask <<= 63;
