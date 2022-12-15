@@ -1,17 +1,17 @@
-#include <stdio.h>
 #include "dog.h"
-#ifndef MAIN_H
-#define MAIN_H
+#include <stdlib.h>
 
 /**
- * free_dog - frees dog
- * @d: Freed dog
+ * free_dog - Frees dog memory
+ * @d: Doggy
  */
+
 void free_dog(dog_t *d)
 {
-if (d == NULL)
-return;
-free(d->owner);
-free(d->name);
-free(d);
+	if (d == NULL)
+		return;
+
+	free(d->owner);
+	free(d->name);
+	free(d);
 }
