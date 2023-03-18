@@ -1,18 +1,16 @@
-#include "main.h"
 /**
- * _strlen - return the length of the string
- *@s: char type pointer
- *Return: length of string
- */
+ * _strlen - count the length of string
+ *
+ * @s: pointer to char that takes string input
+ *
+ * Return: string length
+*/
+
 int _strlen(char *s)
 {
-	int i, compt = 0;
+	int i;
 
-	for (i = 0; s[i] != '\0'; i++)
-	{
-		compt++;
-	}
-
-	return (compt);
-
+	for (i = 0; s[i] != '\0';)
+		i++;
+	return (i);
 }
